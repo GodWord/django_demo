@@ -11,7 +11,7 @@ class UserProfile(AbstractUser):
     gender = models.CharField(max_length=6, choices=(('male', '男'), ('female', '女')), default='male')
     address = models.CharField(max_length=100, verbose_name='地址', default='')
     mobile = models.CharField(max_length=11, null=True, blank=True)
-    image = models.ImageField(upload_to='image/%Y/%m', default='image/default.png', max_length=100)
+    image = models.ImageField(upload_to='static/image/%Y/%m', default='image/default.png', max_length=100)
 
     add_time = models.DateTimeField(default=django.utils.timezone.now, verbose_name='添加时间')
 
@@ -39,7 +39,7 @@ class EmailVerfyRecord(models.Model):
 
 class Banner(models.Model):
     title = models.CharField(max_length=100, verbose_name='标题')
-    image = models.ImageField(upload_to='banner/%Y/%M', verbose_name='轮播图')
+    image = models.ImageField(upload_to='static/media/banner/%Y/%M', verbose_name='轮播图')
     url = models.URLField(max_length=200, verbose_name='访问地址')
     index = models.IntegerField(default=100, verbose_name='顺序')
     add_time = models.DateTimeField(default=django.utils.timezone.now, verbose_name='添加时间')
