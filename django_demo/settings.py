@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.db_test',
     'apps.users',
     'apps.courses',
     'apps.operation',
@@ -89,7 +90,7 @@ DATABASES = {
         'NAME': 'django_db',
         'USER': 'vfeng',
         'PASSWORD': 'admin',
-        'HOST': 'localhost'
+        'HOST': 'localhost',
     }
 }
 

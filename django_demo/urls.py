@@ -17,6 +17,7 @@ from django.urls import path, re_path
 from django.views.generic import TemplateView
 
 import xadmin
+from db_test.views import test
 from users.views import login, ana
 
 urlpatterns = [
@@ -25,4 +26,5 @@ urlpatterns = [
     re_path(r'^$', TemplateView.as_view(template_name='index.html')),
     re_path(r'login\?*', login),
     re_path(r'ana\?*', ana),
+    re_path(r'test/$', test),
 ]
