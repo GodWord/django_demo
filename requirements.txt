@@ -20,7 +20,7 @@ Pillow==5.1.0
 pipreqs==0.4.9
 PyMySQL==0.8.1
 pytz==2018.4
-PyYAML==3.13
+PyYAML==5.4
 requests==2.19.1
 six==1.11.0
 tablib==0.12.1
